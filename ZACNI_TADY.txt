@@ -1,0 +1,46 @@
+SUMMIT PRO IPHONE – WINDOWS + SIDELOADLY (ZDARMA)
+==================================================
+
+POZOR: TOTO JE ZDROJOVY BALICEK, NENI TO JESTE .IPA.
+Apple aplikace se musi nejdrive sestavit pres Xcode. Nize uvedeny
+postup pouzije bezplatny macOS pocitac na GitHub Actions.
+
+A) JAK VYROBIT SOUBOR SUMMIT.IPA
+1. Na Windows rozbal tento ZIP do slozky.
+2. Otevri https://github.com/new a prihlas se (ucet zdarma).
+3. Vytvor PRIVATE repozitar, napr. summit-iphone.
+   GitHub Free ma urcity pocet bezplatnych minut Actions.
+   Pokud GitHub soukrome spousteni neumozni, muze pomoci PUBLIC repo,
+   ale pak bude zdrojovy kod aplikace verejne viditelny.
+   Zaskrtni 'Add a README file', aby se vytvorila hlavni vetev.
+4. V repozitari otevri 'Add file' > 'Upload files'.
+5. Pretahni VSECHNY soubory a slozky z rozbalene slozky
+   SUMMIT_IPA_BUILDER, vcetne '.github', 'SUMMIT' a 'project.yml'.
+   Pozor: Neposilej ZIP jako jeden soubor, je nutne nahrat jeho obsah!
+6. Dole klikni na 'Commit changes'.
+7. Otevri zalozku Actions. Pokud GitHub chce povolit Actions,
+   potvrd to. Zvol workflow 'Vytvorit SUMMIT IPA'.
+8. Klikni 'Run workflow' > 'Run workflow' (pokud nebezi samo).
+9. Po dokonceni klikni na uspesny beh a dole na 'SUMMIT-IPA'.
+   Stazeny artifact ZIP rozbal – uvnitr bude opravdu SUMMIT.ipa.
+
+B) KAM PRESNE DAT IPA DO SIDELOADLY
+1. Otevri program Sideloadly na Windows.
+2. Pripoj iPhone datovym USB kabelem a na telefonu dej Duverovat.
+3. V hornim poli 'iDevice' vyber iPhone (nesmi psat No devices detected).
+4. Pretahni SUMMIT.ipa ZE SLOZKY STAZENE SOUBORY do VELKE IKONY
+   IPA VLEVO NAHORU V OKNE SIDELOADLY (tam kde je pod ni '<none>').
+   NE do policka Apple ID, tam patri pouze e-mail Apple ID.
+5. Zadej svoje Apple ID, klikni Start. Sideloadly aplikaci podepise.
+6. Na iPhonu pripadne zapni Developer Mode a v Nastaveni > Obecne >
+   VPN a sprava zarizeni povol duveru svemu vyvojarskemu profilu.
+7. Ikona SUMMIT bude na plose iPhonu. U bezplatneho Apple ID
+   obvykle prestane podpis platit po 7 dnech a je nutne jej obnovit.
+
+BEZPECNOST:
+- Heslo ke svemu Apple ID nedavej nikomu do chatu ani do GitHubu.
+- Pro sdileni s ostatnimi je jednodussi verejny web a PWA.
+- Fotografie a online mapove podklady vyzaduji internet.
+- Lokalne ulozena data z PWA/HTML se do nove aplikace automaticky
+  neprenesou. Pred prechodem udelej JSON zalohu.
+- Zdrojovy projekt a build nemohly byt v tomto prostredi otestovany na Xcode.
